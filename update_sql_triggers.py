@@ -189,7 +189,6 @@ def main(triggers_path, connection_string):
     sql_objects = get_sql_objects(connection_string)
     file_objects = get_file_objects(triggers_path)
 
-    # Iterate through all *.sql files, and find new ones.
     changed_objects = find_changed_objects(
         sql_objects=sql_objects,
         file_objects=file_objects)
